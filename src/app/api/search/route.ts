@@ -1,4 +1,4 @@
-import { createClient } from "@/prismicio";
+{/* import { createClient } from "@/prismicio";
 import { asText } from "@prismicio/helpers";
 import * as prismic from "@prismicio/client";
 
@@ -39,4 +39,4 @@ export async function GET(request: Request) {
         return Response.json([], { status: 500 });
     }
 }
-
+*/}
