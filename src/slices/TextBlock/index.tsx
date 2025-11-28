@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Content } from "@prismicio/client";
+import { Content, asLink } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 
 /**
@@ -83,12 +83,21 @@ const TextBlock: FC<TextBlockProps> = ({ slice }) => {
 
           // Links
           hyperlink: ({ node, children }) => {
-            const url = node.data.url;
+            const url = asLink(node.data);
+
+            // 2. Correção do Target:
+            // Verificamos com segurança se 'target' existe em node.data
+            const isExternal =
+              "target" in node.data && node.data.target === "_blank";
+
+            // Fallback para links quebrados ou não resolvidos
+            if (!url) {
+              return <>{children}</>;
+            }
             return (
               <a
                 href={url}
-                target={node.data.target || undefined}
-                rel={node.data.target === "_blank" ? "noopener noreferrer" : undefined}
+                {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
                 className="text-terciary hover:text-terciary-foreground underline underline-offset-4 transition-colors duration-200 font-medium"
               >
                 {children}
