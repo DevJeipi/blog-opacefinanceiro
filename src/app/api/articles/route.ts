@@ -2,7 +2,7 @@ import { createClient } from "@prismicio/client";
 import { asText } from "@prismicio/helpers";
 import * as prismic from "@prismicio/client";
 
-const client = createClient(process.env.NEXT_PUBLIC_PRISMIC_REPO_NAME || "", {
+const client = createClient(process.env.NEXT_PUBLIC_PRISMIC_ENVIRONMENT || "", {
   accessToken: process.env.PRISMIC_ACCESS_TOKEN,
 });
 
