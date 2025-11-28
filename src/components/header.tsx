@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Search, Menu, X, ExternalLink, ChevronRight, Loader2 } from "lucide-react";
+import {
+  Search,
+  Menu,
+  X,
+  ExternalLink,
+  ChevronRight,
+  Loader2,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -160,10 +167,11 @@ export default function Header({ topics = [] }: BlogHeaderProps) {
         <div className="flex items-center justify-between h-16 md:h-20 relative">
           {/* Logo */}
           <div
-            className={`shrink-0 transition-all duration-500 ${isSearchOpen
-              ? "opacity-0 -translate-x-8"
-              : "opacity-100 translate-x-0"
-              }`}
+            className={`shrink-0 transition-all duration-500 ${
+              isSearchOpen
+                ? "opacity-0 -translate-x-8"
+                : "opacity-100 translate-x-0"
+            }`}
           >
             <Link href="/" className="flex items-center">
               <Image
@@ -183,10 +191,11 @@ export default function Header({ topics = [] }: BlogHeaderProps) {
               href="https://opacefinanceiro.com.br"
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex justify-center px-4 transition-all duration-500 ${isSearchOpen
-                ? "opacity-0 scale-95 pointer-events-none"
-                : "opacity-100 scale-100"
-                }`}
+              className={`flex justify-center px-4 transition-all duration-500 ${
+                isSearchOpen
+                  ? "opacity-0 scale-95 pointer-events-none"
+                  : "opacity-100 scale-100"
+              }`}
             >
               <ShimmerButton
                 background="var(--color-terciary)"
@@ -201,10 +210,11 @@ export default function Header({ topics = [] }: BlogHeaderProps) {
 
           {/* Ícones - Direita */}
           <div
-            className={`flex items-center gap-2 md:gap-4 transition-all duration-500 ${isSearchOpen
-              ? "opacity-0 translate-x-8"
-              : "opacity-100 translate-x-0"
-              }`}
+            className={`flex items-center gap-2 md:gap-4 transition-all duration-500 ${
+              isSearchOpen
+                ? "opacity-0 translate-x-8"
+                : "opacity-100 translate-x-0"
+            }`}
           >
             {/* Botão Externo - Mobile */}
             {isMobile && (
@@ -241,10 +251,11 @@ export default function Header({ topics = [] }: BlogHeaderProps) {
           {/* Barra de Pesquisa Expandida */}
           <div
             ref={searchContainerRef}
-            className={`absolute inset-0 flex items-center transition-all duration-500 ${isSearchOpen
-              ? "opacity-100 translate-y-0 pointer-events-auto"
-              : "opacity-0 -translate-y-4 pointer-events-none"
-              }`}
+            className={`absolute inset-0 flex items-center transition-all duration-500 ${
+              isSearchOpen
+                ? "opacity-100 translate-y-0 pointer-events-auto"
+                : "opacity-0 -translate-y-4 pointer-events-none"
+            }`}
           >
             <div className="flex-1 flex flex-col relative">
               <div className="flex items-center gap-4">
@@ -333,25 +344,28 @@ export default function Header({ topics = [] }: BlogHeaderProps) {
 
       {/* Mega Menu Desktop */}
       <div
-        className={`absolute left-0 right-0 top-full bg-primary border-t border-primary-foreground/10 shadow-lg overflow-hidden transition-all duration-500 ${isMenuOpen && !isMobile
-          ? "max-h-[600px] opacity-100"
-          : "max-h-0 opacity-0"
-          }`}
+        className={`absolute left-0 right-0 top-full bg-primary border-t border-primary-foreground/10 shadow-lg overflow-hidden transition-all duration-500 ${
+          isMenuOpen && !isMobile
+            ? "max-h-[600px] opacity-100"
+            : "max-h-0 opacity-0"
+        }`}
       >
         <GridContainer
-          className={`transition-all duration-500 delay-100 ${isMenuOpen && !isMobile
-            ? "translate-y-0 opacity-100"
-            : "-translate-y-4 opacity-0"
-            }`}
+          className={`transition-all duration-500 delay-100 ${
+            isMenuOpen && !isMobile
+              ? "translate-y-0 opacity-100"
+              : "-translate-y-4 opacity-0"
+          }`}
         >
           <div className="grid grid-cols-3 gap-8">
             {topics.map((topic, topicIndex) => (
               <div
                 key={topic.id}
-                className={`space-y-4 transition-all duration-500 ${isMenuOpen && !isMobile
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-8 opacity-0"
-                  }`}
+                className={`space-y-4 transition-all duration-500 ${
+                  isMenuOpen && !isMobile
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-8 opacity-0"
+                }`}
                 style={{
                   transitionDelay: isMenuOpen
                     ? `${150 + topicIndex * 100}ms`
@@ -365,10 +379,11 @@ export default function Header({ topics = [] }: BlogHeaderProps) {
                   {topic.articles.map((article, articleIndex) => (
                     <li
                       key={article.id}
-                      className={`transition-all duration-300 ${isMenuOpen && !isMobile
-                        ? "translate-x-0 opacity-100"
-                        : "-translate-x-4 opacity-0"
-                        }`}
+                      className={`transition-all duration-300 ${
+                        isMenuOpen && !isMobile
+                          ? "translate-x-0 opacity-100"
+                          : "-translate-x-4 opacity-0"
+                      }`}
                       style={{
                         transitionDelay: isMenuOpen
                           ? `${200 + topicIndex * 100 + articleIndex * 50}ms`
@@ -396,22 +411,25 @@ export default function Header({ topics = [] }: BlogHeaderProps) {
         <>
           {/* Overlay */}
           <div
-            className={`fixed inset-0 bg-black z-40 transition-opacity duration-500 ${isMenuOpen ? "opacity-50" : "opacity-0 pointer-events-none"
-              }`}
+            className={`fixed inset-0 bg-black z-40 transition-opacity duration-500 ${
+              isMenuOpen ? "opacity-50" : "opacity-0 pointer-events-none"
+            }`}
             onClick={() => setIsMenuOpen(false)}
           />
 
           {/* Sidebar */}
           <div
-            className={`mega-menu fixed right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-primary shadow-2xl z-50 overflow-y-auto transition-transform duration-500 ease-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
-              }`}
+            className={`mega-menu fixed right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-primary shadow-2xl z-50 overflow-y-auto transition-transform duration-500 ease-out ${
+              isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
           >
             <div className="p-4 border-b border-gray-200 flex items-center justify-between sticky top-0 bg-primary z-10">
               <h2
-                className={`text-xl font-bold text-primary-foreground transition-all duration-500 ${isMenuOpen
-                  ? "translate-x-0 opacity-100"
-                  : "-translate-x-8 opacity-0"
-                  }`}
+                className={`text-xl font-bold text-primary-foreground transition-all duration-500 ${
+                  isMenuOpen
+                    ? "translate-x-0 opacity-100"
+                    : "-translate-x-8 opacity-0"
+                }`}
                 style={{ transitionDelay: isMenuOpen ? "200ms" : "0ms" }}
               >
                 Menu
@@ -429,10 +447,11 @@ export default function Header({ topics = [] }: BlogHeaderProps) {
               {topics.map((topic, topicIndex) => (
                 <div
                   key={topic.id}
-                  className={`space-y-3 transition-all duration-500 ${isMenuOpen
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-8 opacity-0"
-                    }`}
+                  className={`space-y-3 transition-all duration-500 ${
+                    isMenuOpen
+                      ? "translate-x-0 opacity-100"
+                      : "translate-x-8 opacity-0"
+                  }`}
                   style={{
                     transitionDelay: isMenuOpen
                       ? `${250 + topicIndex * 100}ms`
@@ -446,10 +465,11 @@ export default function Header({ topics = [] }: BlogHeaderProps) {
                     {topic.articles.map((article, articleIndex) => (
                       <li
                         key={article.id}
-                        className={`transition-all duration-300 ${isMenuOpen
-                          ? "translate-x-0 opacity-100"
-                          : "translate-x-8 opacity-0"
-                          }`}
+                        className={`transition-all duration-300 ${
+                          isMenuOpen
+                            ? "translate-x-0 opacity-100"
+                            : "translate-x-8 opacity-0"
+                        }`}
                         style={{
                           transitionDelay: isMenuOpen
                             ? `${300 + topicIndex * 100 + articleIndex * 50}ms`
@@ -458,7 +478,7 @@ export default function Header({ topics = [] }: BlogHeaderProps) {
                       >
                         <a
                           href={`/${article.slug}`}
-                          className="block text-sm text-gray-600 hover:text-terciary hover:bg-primary-foreground/10 py-2 px-2 rounded transition-all hover:translate-x-2 hover:shadow-sm"
+                          className="block text-sm text-primary-foreground hover:text-terciary hover:bg-primary-foreground/10 py-2 px-2 rounded transition-all hover:translate-x-2 hover:shadow-sm"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {article.title}
