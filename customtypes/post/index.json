@@ -17,7 +17,7 @@
         "config": {
           "label": "Categoria",
           "placeholder": "Categoria do Post",
-          "options": ["ganhe-mais", "gaste-menos", "invista-melhor"]
+          "options": ["Ganhe Mais", "Gaste Menos", "Invista Melhor"]
         }
       },
       "titulo": {

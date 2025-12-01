@@ -1,17 +1,17 @@
 export const TOPICS = [
   {
-    id: "Ganhe Mais",
+    id: "ganhe-mais",
     title: "Ganhe Mais",
-    slug: "ganhe-mais",
+    slug: "Ganhe Mais",
   },
   {
-    id: "Gaste Menos",
+    id: "gaste-menos",
     title: "Gaste Menos",
-    slug: "gaste-menos",
+    slug: "Gaste Menos",
   },
   {
-    id: "Invista Melhor",
+    id: "invista-melhor",
     title: "Invista Melhor",
-    slug: "invista-melhor",
+    slug: "Invista Melhor",
   },
 ];
