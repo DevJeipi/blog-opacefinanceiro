@@ -85,7 +85,7 @@ interface PostDocumentData {
    * - **Documentation**: https://prismic.io/docs/fields/select
    */
   category: prismic.SelectField<
-    "Ganhe Mais" | "Gaste Menos" | "Invista Melhor"
+    "ganhe-mais" | "gaste-menos" | "invista-melhor"
   >;
 
   /**
