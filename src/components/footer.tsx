@@ -32,7 +32,7 @@ export function Footer() {
                                 Início
                             </Link>
                             <a
-                                href="https://opacefinanceiro.com.br"
+                                href="https://beacons.ai/opacefinanceiro"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-200"
