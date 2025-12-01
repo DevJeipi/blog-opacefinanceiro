@@ -84,7 +84,9 @@ interface PostDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/fields/select
    */
-  category: prismic.SelectField<"investimentos" | "planejamento" | "economia">;
+  category: prismic.SelectField<
+    "Ganhe Mais" | "Gaste Menos" | "Invista Melhor"
+  >;
 
   /**
    * Título field in *blog_post*

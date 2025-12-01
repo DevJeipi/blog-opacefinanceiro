@@ -1,17 +1,17 @@
 export const TOPICS = [
   {
-    id: "investimentos",
-    title: "Investimentos",
-    slug: "investimentos",
+    id: "Ganhe Mais",
+    title: "Ganhe Mais",
+    slug: "ganhe-mais",
   },
   {
-    id: "planejamento",
-    title: "Planejamento Financeiro",
-    slug: "planejamento",
+    id: "Gaste Menos",
+    title: "Gaste Menos",
+    slug: "gaste-menos",
   },
   {
-    id: "economia",
-    title: "Economia",
-    slug: "economia",
+    id: "Invista Melhor",
+    title: "Invista Melhor",
+    slug: "invista-melhor",
   },
 ];
