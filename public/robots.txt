@@ -1,0 +1,9 @@
+# Permitir que todos os robôs acessem tudo
+User-agent: *
+Allow: /
+
+# Desabilitar o rastreamento de rotas de API e previews do Next.js
+Disallow: /api/
+
+# Localização do seu Sitemap
+Sitemap: https://blog.opacefinanceiro.com.br/sitemap.xml
