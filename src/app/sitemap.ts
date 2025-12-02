@@ -27,7 +27,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 return {
                     url: `${SITE_URL}/${post.uid}`,
                     lastModified,
-                    changeFrequency: 'weekly' as const,
+                    changeFrequency: 'yearly' as const,
                     priority: 0.7, // Posts individuais têm prioridade menor que a home
                 };
             });
@@ -37,7 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             {
                 url: SITE_URL,
                 lastModified: new Date(),
-                changeFrequency: 'daily' as const,
+                changeFrequency: 'monthly' as const,
                 priority: 1.0,
             },
         ];
@@ -51,7 +51,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             {
                 url: SITE_URL,
                 lastModified: new Date(),
-                changeFrequency: 'daily' as const,
+                changeFrequency: 'monthly' as const,
                 priority: 1.0,
             },
         ];
